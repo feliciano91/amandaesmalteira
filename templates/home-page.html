@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAGINA INICIAL</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="home-equipe"></div>
+    <div class="laterall-home"></div>
+    <a href="/login">
+      <img class="logo-home" src="/static/images/logo.png" alt="logo-home" />
+    </a>
+    <div class="anuncios"></div>
+    <a href="/esmalteria">
+      <button type="button" class="btn-esmalteria"></button>
+    </a>
+    <button type="submit" class="btn-esmalteria2"></button>
+    <button type="submit" class="btn-esmalteria3"></button>
+    <button type="submit" class="btn-esmalteria4"></button>
+  </body>
+</html>
