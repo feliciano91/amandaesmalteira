@@ -1,0 +1,71 @@
+/* confirm.css */
+
+body.container-confirmar {
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/static/images/template.png');
+    flex-direction: column;   /* Organiza os itens na direção da coluna */
+    justify-content: center;  /* Centraliza verticalmente */
+    align-items: center;      /* Centraliza horizontalmente */
+    height: 100vh;            /* Faz com que o body ocupe toda a altura da tela */
+    margin: 0;                /* Remove qualquer margem padrão */
+    font-family: Arial, sans-serif; /* Definindo uma fonte básica */
+    text-align: center;       /* Centraliza o texto horizontalmente */
+}
+
+/* Adicionando sobreposição para melhorar a legibilidade */
+body.container-confirmar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(148, 145, 145, 0.5); /* Cor preta semitransparente */
+    z-index: -1; /* Garante que a sobreposição fique atrás do conteúdo */
+}
+
+/* Estilizando o título */
+.titulo {
+    font-size: 3rem;
+    color: #036003;
+    margin-bottom: 20px; /* Adicionando um espaço abaixo do título */
+}
+
+/* Estilizando os textos */
+.data,
+.hora,
+.pagamento {
+    color: #252424; /* Mudando a cor do texto para branco para contraste */
+    font-size: 1.5rem;
+    margin-bottom: 8px;  /* Adicionando espaço entre os elementos */
+}
+
+/* Estilizando o link */
+a.novo-agendamento {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: -150px;
+    padding: 10px 40px;
+    background-color: #0756ab;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+a.novo-agendamento:hover {
+    background-color: #0056b3;
+}
+
+a.sair {
+    display: inline-block;
+    margin-top: -40px;
+    margin-left: 300px;
+    padding: 10px 20px;
+    background-color: #09294b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+}

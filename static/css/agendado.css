@@ -1,0 +1,209 @@
+/* Estilo geral da página */
+
+/* Container para o fundo da imagem */
+.container-agendado {
+    position: fixed; /* Altera para fixed para o fundo ocupar toda a tela sem sobrepor o conteúdo */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/static/images/template.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;  /* Coloca a imagem de fundo atrás do conteúdo */
+    opacity: 0.1; /* Define a opacidade de todo o elemento */
+}
+
+/* Estilo do título principal */
+h1 {
+    margin-top: 40px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #676565;
+}
+
+/* Estilo para o calendário */
+#calendario {
+    width: 50%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 80px;
+    margin-left: 45px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que os itens do header se ajustem quando necessário */
+}
+.semana {
+    background-color: #f1f1f1;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+header button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #363b56;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+td.dia {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+td.dia:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para destacar o dia atual no calendário */
+.data-hoje {
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #a30202; /* Cor do texto */
+    border-radius: 50%; /* Torna o destaque arredondado */
+}
+
+/* Estilo para a tabela de horários */
+#horarios {
+    width: 35%;
+    height: 40px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: -24rem;
+    margin-left: 55rem;
+}
+.agendados {
+    color: #1b0a45;
+    margin-top: 0.4rem;
+}
+
+#horario td {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #eee;
+}
+
+#horario td:first-child {
+    text-align: left;
+}
+
+#horario td:last-child {
+    text-align: right;
+}
+
+/* Estilos de mensagem quando não há horários */
+#horarios h2 {
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+#horario td[colspan="2"] {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container-agendado {
+        opacity: 0.2; /* Aumenta a opacidade para não prejudicar a visibilidade em telas pequenas */
+    }
+
+    #calendario, #horarios {
+        width: 100%;
+        max-width: 100%; /* Garante que ocupe toda a largura disponível */
+        font-size: 0.8rem; /* Ajusta o tamanho da fonte na tabela de horários */
+        color: #000000;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    .semana {
+        font-size: 0.71rem;
+    }
+
+    header {
+        align-items: center;
+        margin-bottom: 10px; /* Ajusta a margem no header para dispositivos pequenos */
+    }
+
+    header h2 {
+        margin: 5px 0;
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    #horarios {
+        margin-top: 1rem; /* Ajusta a margem superior */
+        margin-left: 2rem;
+    }
+
+    #horario td {
+        font-size: 1rem; /* Ajusta o tamanho da fonte na tabela de horários */
+    }
+
+    
+}
+
+
+@media (max-width: 768px) {
+    /* Ajustes para tablets ou telas médias */
+    #calendario {
+        width: 80%; /* Ajusta para usar mais largura em telas maiores que 480px */
+    }
+
+    #horarios {
+        width: 80%;
+    }
+
+    header h2 {
+        font-size: 1.8rem; /* Ajusta o tamanho da fonte para tablets */
+    }
+}
